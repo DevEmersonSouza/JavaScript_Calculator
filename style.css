@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.title {
+    text-align: left;
+    margin: 7px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 8pt;
+}
+
+.calcframe {
+    border: solid rgb(153, 153, 153) 1px;
+    background-color: #e6e6e6;
+    max-width: 420px;
+    max-height: 850px;
+    height: 536px;
+    
+
+}
+
+.calclayout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input.opButtons {
+    background-color: #e6e6e6;
+    margin: 0px;
+    width: fit-content;
+
+}
+
+input {
+    background-color: #f0f0f0;
+    margin: 1px;
+    padding: 20px;
+    border: none;
+    width: 90px;
+    height: 60px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+input.numerical {
+    background-color: #fafafa;
+}
+
+input.equal {
+    background-color: #76a7d0;
+}
+
+.display {
+    width: 353px;
+    margin: 4px;
+    padding: 20px;
+}
