@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
 
-div{
+div {
     font-size: 0;
 }
+
 body {
     display: flex;
     flex-direction: column;
@@ -23,7 +24,7 @@ body {
     background-color: #e6e6e6;
     max-width: 390px;
     max-height: 840px;
-    height:501px;
+    height: 538px;
 }
 
 .calcLayout {
@@ -40,9 +41,11 @@ input.opButtons {
     height: 30px;
     border-radius: 6px;
 }
-input.opButtons:hover{
-        background: #f0f0f0;;
-        opacity: 90%;
+
+input.opButtons:hover {
+    background: #f0f0f0;
+    ;
+    opacity: 90%;
 }
 
 input {
@@ -54,29 +57,57 @@ input {
     height: 60px;
     font-family: 'Montserrat', sans-serif;
 }
-input:hover{
-        background:#fafafa;
-        opacity: 90%;
-}
 
-input.numerical:hover{
-        background:#f0f0f0;
-        opacity: 90%;
+input.keys:hover {
+    background: #fafafa;
+    opacity: 90%;
+    padding: 1rem;
+    text-align: center;
 
 }
+input:focus {
+    outline: none;
+  }
 
 input.numerical {
     background-color: #fafafa;
+}
+
+input.numerical:hover {
+    background: #f0f0f0;
+    opacity: 90%;
+    box-shadow: 0 0 5px rgba(33, 33, 33, .2);
 }
 
 input.equal {
     background-color: #76a7d0;
 }
 
-.display {
+input.equal:hover {
+    background-color: #4385bb;
+}
+
+.resultDisplay {
     margin: 4px;
     padding: 10px;
     font-size: 5pt;
     min-width: 345px;
     max-height: 40px;
+    background-color: #e6e6e6;
+}
+
+.display:hover {
+    background-color: #e6e6e6;
+
+}
+
+.calcDisplay {
+    margin: 4px;
+    padding: 10px;
+    font-size: 5pt;
+    min-width: 345px;
+    max-height: 10px;
+    background-color: #e6e6e6;
+    text-align: right;
+    font-size: 12pt;
 }
