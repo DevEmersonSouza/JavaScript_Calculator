@@ -1,6 +1,7 @@
-let display = document.getElementById("calcDisplay").textContent;
-let result = 0;
+let display = document.getElementById("calcDisplay");
+let result = document.getElementById("resultDisplay");
 let operator = "";
+fatorNumerico = 0
 
 // Função de exibição dos números //
 
@@ -10,48 +11,48 @@ function number(value) {
 
 // Funções dos botões especiais //
 
+function operation(value) {
+  operator = value;
+  calcDisplay.value += value
+}
+function backSpace(){
+  calcDisplay.value = calcDisplay.value.slice(0, - 1);
+} 
 function clearButton(value) {
     calcDisplay.value = value
 }
-function operation(value) {
-    operator = value;
-    calcDisplay.value += value
-}
-function backSpace(){
-    calcDisplay.value = calcDisplay.value.slice(0, - 1);
-} 
 
 // Funções de Operações Matemáticas //
 
-function opResults(value) {
-    if (typeof value === "number") {
-      display = display + value;
-    }
-    if (typeof value === "string") {
-      if (value === "-") {
-        result = parseInt(display);
-        display = "";
-        operator = "-";
-      }
-      if (value === "+") {
-        result = parseInt(display);
-        display = "";
-        operator = "+";
-      }
-      if (value === "=") {
-        if (operator === "+") {
-          display = result + parseInt(display);
-          operator = "";
-        }
-        if (operator === "-") {
-          display = result - parseInt(display);
-          operator = "";
-        }
-      }
-    }
-  
-    document.getElementById("resultDisplay").textContent = display;
+function opResults(param) {
+  if (typeof param === "number") {
+    calcDisplay = calcDisplay + param;
   }
+  if (typeof param === "string") {
+    if (param === "-") {
+      fatorNumerico = parseInt(calcDisplay);
+      calcDisplay = "";
+      operator = "-";
+    }
+    if (param === "+") {
+      fatorNumerico = parseInt(calcDisplay);
+      calcDisplay = "";
+      operator = "+";
+    }
+    if (param === "=") {
+      if (operator === "+") {
+        calcDisplay = fatorNumerico + parseInt(calcDisplay);
+        operator = "";
+      }
+      if (operator === "-") {
+        calcDisplay = fatorNumerico - parseInt(calcDisplay);
+        operator = "";
+      }
+    }
+  }
+
+  document.getElementById("calcDisplay").textContent = calcDisplay;
+}
 
 // Funções de seleção de operação //
 
@@ -72,3 +73,4 @@ function minusOp() {
     element.style.backgroundColor = '#c8c8c8';
 }
 
+console.log(display)

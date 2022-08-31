@@ -41,7 +41,7 @@
                 <input type="button" class="numerical" value="7" onclick="number(7)">
                 <input type="button" class="numerical" value="8" onclick="number(8)">
                 <input type="button" class="numerical" value="9" onclick="number(9)">
-                <input type="button" class="keys" value="X" id="multiplier" onclick="operation('x'), multiOp(), opResults('x')">
+                <input type="button" class="keys" value="X" id="multiplier" onclick="operation('x'), multiOp(), opResults('*')">
             </div>
             <div>
                 <input type="button" class="numerical" value="4" onclick="number(4)">
@@ -50,16 +50,16 @@
                 <input type="button" class="keys" value="-" id="minus" onclick="operation('-'), minusOp(), opResults('-')">
             </div>
             <div>
-                <input type="button" class="numerical" value="1" onclick="number(1)">
-                <input type="button" class="numerical" value="2" onclick="number(2)">
+                <input type="button" class="numerical" value="1" onclick="number(1), opResults('1')">
+                <input type="button" class="numerical" value="2" onclick="number(2), opResults('2')">
                 <input type="button" class="numerical" value="3" onclick="number(3)">
-                <input type="button" class="keys" value="+" id="plus" onclick="operation('+'), plusOp(), opResults('+')">
+                <input type="button" class="oper keys" value="+" id="plus" onclick="operation('+'), plusOp(), opResults('+')">
             </div>
             <div>
                 <input type="button" class="numerical" value="+/-">
                 <input type="button" class="numerical" value="0" onclick="number(0)">
                 <input type="button" class="numerical" value=",">
-                <input type="button" class="equal" value="=" onclick="opResults('=')">
+                <input type="button" class="equal" value="=" onclick="opResults()">
             </div>
         </div>
     </div>
