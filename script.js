@@ -1,76 +1,68 @@
-let display = document.getElementById("calcDisplay");
-let result = document.getElementById("resultDisplay");
-let operator = "";
-fatorNumerico = 0
+let calcDisplay = document.getElementById("resultDisplay");
+let result = document.getElementById("calcDisplay");
+let fatorNumerico = 0;
 
 // Função de exibição dos números //
 
 function number(value) {
-    calcDisplay.value += value
+  calcDisplay.value = calcDisplay.value + value;
 }
 
 // Funções dos botões especiais //
 
 function operation(value) {
-  operator = value;
-  calcDisplay.value += value
+  operator = value
+  fatorNumerico = parseInt(calcDisplay.value);
+  calcDisplay.value = calcDisplay.value + value;
+  clearButton();
 }
-function backSpace(){
-  calcDisplay.value = calcDisplay.value.slice(0, - 1);
-} 
-function clearButton(value) {
-    calcDisplay.value = value
+function backSpace() {
+  calcDisplay.value = calcDisplay.value.slice(0, -1);
+}
+function clearButton() {
+  calcDisplay.value = "";
+  result.value = "";
 }
 
+function clearEntryButton() {
+  calcDisplay.value = parseInt("");
+  
+}
 // Funções de Operações Matemáticas //
 
-function opResults(param) {
-  if (typeof param === "number") {
-    calcDisplay = calcDisplay + param;
+function opResults() {
+  if (operator === "÷") {
+    result.value = fatorNumerico / parseInt(calcDisplay.value);
   }
-  if (typeof param === "string") {
-    if (param === "-") {
-      fatorNumerico = parseInt(calcDisplay);
-      calcDisplay = "";
-      operator = "-";
-    }
-    if (param === "+") {
-      fatorNumerico = parseInt(calcDisplay);
-      calcDisplay = "";
-      operator = "+";
-    }
-    if (param === "=") {
-      if (operator === "+") {
-        calcDisplay = fatorNumerico + parseInt(calcDisplay);
-        operator = "";
-      }
-      if (operator === "-") {
-        calcDisplay = fatorNumerico - parseInt(calcDisplay);
-        operator = "";
-      }
-    }
+  if (operator === '+') {
+    result.value = fatorNumerico + parseInt(calcDisplay.value);
+    plusOp();
+  }
+  if (operator === '-') {
+    result.value = fatorNumerico - parseInt(calcDisplay.value);
+  }
+  if (operator === 'x') {
+    result.value = fatorNumerico * parseInt(calcDisplay.value);
   }
 
-  document.getElementById("calcDisplay").textContent = calcDisplay;
+  document.getElementById("resultDisplay").textContent = resultDisplay;
 }
 
 // Funções de seleção de operação //
 
 function diviOp() {
-    let element = document.getElementById("division");
-    element.style.backgroundColor = '#c8c8c8';
+  let element = document.getElementById("division");
+  element.style.backgroundColor = "#c8c8c8";
 }
 function multiOp() {
-    let element = document.getElementById("multiplier");
-    element.style.backgroundColor = '#c8c8c8';
+  let element = document.getElementById("multiplier");
+  element.style.backgroundColor = "#c8c8c8";
 }
 function plusOp() {
-    let element = document.getElementById("plus");
-    element.style.backgroundColor = '#c8c8c8';
+  let element = document.getElementById("plus");
+  element.style.backgroundColor = "#c8c8c8";
 }
 function minusOp() {
-    let element = document.getElementById("minus");
-    element.style.backgroundColor = '#c8c8c8';
+  let element = document.getElementById("minus");
+  element.style.backgroundColor = "#c8c8c8";
 }
-
-console.log(display)

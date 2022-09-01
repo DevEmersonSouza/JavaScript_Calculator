@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CalculadoraJS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="calcframe">
+        <div class="title">
+            Calculadora
+        </div>
+        <div class="calcLayout">
+            
+            <input type="text" class="resultDisplay" id="resultDisplay" >
+            <input type="text" class="calcDisplay" id="calcDisplay">
+            <div>
+                <input type="button" class="opButtons" value="MC">
+                <input type="button" class="opButtons" value="MR">
+                <input type="button" class="opButtons" value="M+">
+                <input type="button" class="opButtons" value="M-">
+                <input type="button" class="opButtons" value="MS">
+                <input type="button" class="opButtons" value="Mˇ">
+            </div>
+            <div>
+                <input type="button" class="keys" value="%">
+                <input type="button" class="keys" value="CE" onclick="clearEntryButton()">
+                <input type="button" class="keys" value="C" onclick="clearButton()">
+                <input type="button" class="keys" value="⌫" onclick="backSpace()">
+            </div>
+            <div>
+                <input type="button" class="keys" value="1/X">
+                <input type="button" class="keys" value="x²">
+                <input type="button" class="keys" value="²√x">
+                <input type="button" class="keys" value="÷" id="division" onclick="operation('÷'); diviOp('/')">
+            </div>
+            <div>
+                <input type="button" class="numerical" value="7" onclick="number(7)">
+                <input type="button" class="numerical" value="8" onclick="number(8)">
+                <input type="button" class="numerical" value="9" onclick="number(9)">
+                <input type="button" class="keys" value="X" id="multiplier" onclick="operation('x'); multiOp()"> -->
+            </div>
+            <div>
+                <input type="button" class="numerical" value="4" onclick="number(4)">
+                <input type="button" class="numerical" value="5" onclick="number(5)">
+                <input type="button" class="numerical" value="6" onclick="number(6)">
+                <input type="button" class="keys" value="-" id="minus" onclick="operation('-'); minusOp()"> -->
+            </div>
+            <div>
+                <input type="button" class="numerical" value="1" onclick="number(1)">
+                <input type="button" class="numerical" value="2" onclick="number(2)">
+                <input type="button" class="numerical" value="3" onclick="number(3)">
+                <input type="button" class="oper keys" value="+" id="plus" onclick="operation('+'); plusOp();"> -->
+            </div>
+            <div>
+                <input type="button" class="numerical" value="+/-">
+                <input type="button" class="numerical" value="0" onclick="number(0)">
+                <input type="button" class="numerical" value=",">
+                <input type="button" class="equal" value="=" onclick="opResults()">
+            </div>
+        </div>
+     </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
