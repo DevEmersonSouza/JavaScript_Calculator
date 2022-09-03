@@ -44,6 +44,10 @@ function opResults() {
   if (operator === 'x') {
     result.value = fatorNumerico * parseInt(calcDisplay.value);
   }
+  if (operator === '%') {
+    result.value = fatorNumerico % parseInt(result.value) + "%";
+    
+  }
 
   document.getElementById("resultDisplay").textContent = resultDisplay;
 }

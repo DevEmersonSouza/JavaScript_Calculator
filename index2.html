@@ -27,7 +27,7 @@
                 <input type="button" class="opButtons" value="Mˇ">
             </div>
             <div>
-                <input type="button" class="keys" value="%">
+                <input type="button" class="keys" value="%" onclick="operation('%')">
                 <input type="button" class="keys" value="CE" onclick="clearEntryButton()">
                 <input type="button" class="keys" value="C" onclick="clearButton()">
                 <input type="button" class="keys" value="⌫" onclick="backSpace()">
@@ -59,7 +59,7 @@
             <div>
                 <input type="button" class="numerical" value="+/-">
                 <input type="button" class="numerical" value="0" onclick="number(0)">
-                <input type="button" class="numerical" value=",">
+                <input type="button" class="numerical" value="," onclick="number(',')">
                 <input type="button" class="equal" value="=" onclick="opResults()">
             </div>
         </div>

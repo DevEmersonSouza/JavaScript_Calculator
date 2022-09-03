@@ -25,6 +25,7 @@ body {
     max-width: 390px;
     max-height: 840px;
     height: 538px;
+    box-shadow: 0 0 8px black;
 }
 
 .calcLayout {
@@ -92,7 +93,7 @@ input.equal:hover {
 .resultDisplay {
     margin: 4px;
     padding: 10px;
-    font-size: 5pt;
+    font-size: 9pt;
     min-width: 345px;
     max-height: 10px;
     background-color: #e6e6e6;
